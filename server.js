@@ -32,7 +32,9 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://progee1.github.io", // GitHub Pages frontend
+}));
 app.use(bodyParser.json());
 
 // Register Route
